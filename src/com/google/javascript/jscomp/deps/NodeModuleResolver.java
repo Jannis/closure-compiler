@@ -36,9 +36,10 @@ import javax.annotation.Nullable;
  * within the nearest node_modules folder ancestor.
  */
 public class NodeModuleResolver extends ModuleResolver {
-  private static final String[] FILE_EXTENSIONS_TO_SEARCH = {"", ".js", ".json"};
+  private static final String[] FILE_EXTENSIONS_TO_SEARCH = {"", ".mjs", ".js", ".json"};
   private static final String[] FILES_TO_SEARCH = {
     ModuleLoader.MODULE_SLASH + "package.json",
+    ModuleLoader.MODULE_SLASH + "index.mjs",
     ModuleLoader.MODULE_SLASH + "index.js",
     ModuleLoader.MODULE_SLASH + "index.json"
   };

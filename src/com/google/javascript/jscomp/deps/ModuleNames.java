@@ -80,6 +80,9 @@ public class ModuleNames {
     if (fileName.endsWith(".js")) {
       return fileName.substring(0, fileName.length() - ".js".length());
     }
+    if (fileName.endsWith(".mjs")) {
+      return fileName.substring(0, fileName.length() - ".mjs".length());
+    }
     return fileName;
   }
 
